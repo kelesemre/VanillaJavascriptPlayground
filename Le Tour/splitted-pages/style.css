@@ -75,12 +75,14 @@ h1 {
 
 .split.left {
   left: 0;
+  top: 0;
   background: url("./ps.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .split.left::before {
+  /*adding overlay*/
   content: "";
   position: absolute;
   width: 100%;
@@ -96,6 +98,7 @@ h1 {
 }
 
 .split.right::before {
+  /*adding overlay*/
   content: "";
   position: absolute;
   width: 100%;
