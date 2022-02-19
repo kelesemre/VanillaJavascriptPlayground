@@ -16,7 +16,7 @@ body {
   margin: 0;
 }
 .container {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.3);
   padding: 20px 40px;
 }
 
@@ -34,7 +34,7 @@ body {
   width: 100%;
   background: lightblue;
   padding: 15px;
-  font-family: 16px;
+  font-size: 16px;
   border: 0;
   border-radius: 5px;
 }
@@ -74,6 +74,7 @@ body {
   top: 15px;
   left: 0;
 }
+
 .form-control label span {
   display: inline-block;
   font-size: 18px;
