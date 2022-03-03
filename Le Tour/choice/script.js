@@ -18,7 +18,6 @@ function createTags(input) {
     .split(",")
     .filter((tag) => tag.trim() !== "") //prevent space...
     .map((tag) => tag.trim())
-  console.log("tags", tags)
   tagsEl.innerHTML = ""
 
   tags.forEach((tag) => {
