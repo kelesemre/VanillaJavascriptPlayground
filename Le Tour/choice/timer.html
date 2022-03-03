@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      How to Change the Time Interval of setinterval() Method after Running one
+      Element using JavaScript ?
+    </title>
+  </head>
+
+  <body>
+    <div id="message"></div>
+
+    <script>
+      // Output message
+      var msg = document.getElementById("message")
+
+      var t = 40 // Timer
+      var stop = false
+      // Stores the setInterval ID used by
+      // clearInterval to stop the timer
+      var interval
+
+      f1()
+
+      // Function that changes the timer
+      function changeTimer() {
+        t = t * 1.15
+        return t
+      }
+
+      // Function that run at irregular intervals
+      function f1() {
+        // Clears the previous setInterval timer
+        clearInterval(interval)
+        msg.innerHTML += "<p>Function Fired</p>"
+        var res = changeTimer()
+        if (res > 500) {
+          stop = true
+        }
+        if (stop) {
+          msg.innerHTML += "stop"
+          clearInterval(interval)
+        } else {
+          interval = setInterval(f1, t)
+        }
+      }
+    </script>
+  </body>
+</html>
