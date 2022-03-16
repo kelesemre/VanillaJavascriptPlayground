@@ -5,7 +5,7 @@ counters.forEach((counter) => {
 
   const updateCounter = () => {
     const target = +counter.getAttribute("data-target") // get custom attribute //+ means convert to number type
-    const c = +counter.innerText
+    const c = +counter.innerText // + means that the result of counter.innerText is integer.
 
     const increment = target / 200
 
@@ -13,9 +13,9 @@ counters.forEach((counter) => {
       counter.innerText = `${Math.ceil(c + increment)}`
       setTimeout(updateCounter, 1)
     } else {
-      counter.innerText = target
+      counter.innerText = target;
     }
   }
 
-  updateCounter()
+  updateCounter();
 })

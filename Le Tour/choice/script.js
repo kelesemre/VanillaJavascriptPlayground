@@ -21,14 +21,15 @@ function createTags(input) {
   tagsEl.innerHTML = ""
 
   tags.forEach((tag) => {
-    const tagEl = document.createElement("span")
+    const tagEl = document.createElement("span") // creating span and adding class
     tagEl.classList.add("tag")
     tagEl.innerText = tag
     tagsEl.appendChild(tagEl)
   })
 }
+
 function randomSelect() {
-  const times = 30
+  const times = 40
   
   const interval = setInterval(() => {
     const randomTag = pickRandomTag()
@@ -49,7 +50,7 @@ function randomSelect() {
       const randomTag = pickRandomTag()
 
       highlightTag(randomTag)
-    }, 100)
+    }, 900)
   }, times * 100)
 }
 
